@@ -70,6 +70,10 @@ copyright = "&copy;2019 Alex Flint"
         text = "Blog"
         url = "https://medium.com/@alexjflint"
 
+      [[params.links.list2.link]]
+        text = "Google Scholar"
+        url = "https://scholar.google.com/citations?user=D-McqBkAAAAJ&hl=en"
+
   # Links List #3
   [[params.links]]
     [params.links.list3]
