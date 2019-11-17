@@ -1,5 +1,5 @@
 # Site settings
-baseURL = "//100.115.92.197:1313"
+baseURL = "//www.alexflint.io"
 languageCode = "en-US"
 title = "Alex Flint"
 theme = "split"
@@ -95,7 +95,7 @@ copyright = "&copy;2019 Alex Flint"
 [deployment]
   [[deployment.targets]]
     name = "gcs-alexflint"
-    URL = "gs://alexflint.io"
+    URL = "gs://www.alexflint.io"
 
   [[deployment.matchers]]
     # cache static assets for 20 years.
