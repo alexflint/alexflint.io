@@ -1,6 +1,6 @@
 +++
-title = "Jenny Jones"
-tagline = "Designer. Stylist. Nomad."
+title = "Alex Flint"
+tagline = "Roboticist. Adviser. Paraglider."
 +++
 
-Donec at libero id lectus porta dapibus eu in nibh. Cras id mauris sapien!
+You found me. I live in California. I hope the links collected on this page will lead to us one day meeting each other.

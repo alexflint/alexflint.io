@@ -1,7 +1,7 @@
 # Site settings
 baseURL = "//100.115.92.197:1313"
 languageCode = "en-US"
-title = "Split - HTML Template Demo"
+title = "Alex Flint"
 theme = "split"
 disableKinds = ["section", "taxonomy", "taxonomyTerm", "RSS", "sitemap"]
 
@@ -9,15 +9,15 @@ disableKinds = ["section", "taxonomy", "taxonomyTerm", "RSS", "sitemap"]
 googleAnalytics = ""
 
 # Copyright
-copyright = "&copy;2018 Your Name"
+copyright = "&copy;2019 Alex Flint"
 
 [params]
 
   # Metadata for search engines and social sharing
   author = "Alex Flint"
-  description = "Split is a centrally-divided layout for a professional online presence with a big image or video left with alongside content."
+  description = "Roboticist. Adviser. Paraglider."
   shareImage = "images/social.jpg"
-  twitterHandle = "onepagelove"
+  twitterHandle = "alexjflint"
 
   # Favicon
   favicon = "favicon.ico"
@@ -43,53 +43,49 @@ copyright = "&copy;2018 Your Name"
   # Links List #1
   [[params.links]]
     [params.links.list1]
-      heading = "Connect"
-
-      [[params.links.list1.link]]
-        text = "Blog"
-        url = "#"
+      heading = "Contact"
 
       [[params.links.list1.link]]
         text = "Email"
-        url = "#"
+        url = "mailto:alex.flint@gmail.com"
 
       [[params.links.list1.link]]
-        text = "Newsletter"
-        url = "#"
+        text = "LinkedIn"
+        url = "https://www.linkedin.com/in/alexjflint/"
+
+      [[params.links.list1.link]]
+        text = "Facebook"
+        url = "https://www.facebook.com/alex.j.flint"
 
   # Links List #2
   [[params.links]]
     [params.links.list2]
-      heading = "Social"
+      heading = "Creations"
 
       [[params.links.list2.link]]
-        text = "Twitter"
-        url = "#"
+        text = "Github"
+        url = "https://github.com/alexflint"
 
       [[params.links.list2.link]]
-        text = "Instagram"
-        url = "#"
-
-      [[params.links.list2.link]]
-        text = "Dribbble"
-        url = "#"
+        text = "Blog"
+        url = "https://medium.com/@alexjflint"
 
   # Links List #3
   [[params.links]]
     [params.links.list3]
-      heading = "Network"
+      heading = "Other"
 
       [[params.links.list3.link]]
-        text = "Link One"
-        url = "#"
+        text = "AngelList"
+        url = "https://angel.co/alex-flint"
 
       [[params.links.list3.link]]
-        text = "Link Two"
-        url = "#"
+        text = "Crunchbase"
+        url = "https://www.crunchbase.com/person/alex-flint"
 
       [[params.links.list3.link]]
-        text = "Link Three"
-        url = "#"
+        text = "Twitter"
+        url = "https://twitter.com/alexjflint"
 
   # The original template is released under the Creative Commons Attribution 3.0 License.
   # Please keep the original attribution link when using for your own project.
