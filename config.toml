@@ -71,7 +71,7 @@ copyright = "&copy;2019 Alex Flint"
         url = "https://medium.com/@alexjflint"
 
       [[params.links.list2.link]]
-        text = "Google Scholar"
+        text = "Publications"
         url = "https://scholar.google.com/citations?user=D-McqBkAAAAJ&hl=en"
 
   # Links List #3
