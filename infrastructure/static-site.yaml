@@ -1,0 +1,18 @@
+resources:
+  - name: dns-zone
+    type: dns.v1.managedZone
+    properties:
+      name: alexflint-io
+      dnsName: alexflint.io.
+      description: 'hosted zone for alexflint.io'
+  - name: dns-records
+    type: gcp-types/dns-v1:resourceRecordSets
+    properties:
+      name: alexflint.io.
+      managedZone: alexflint-io
+      records:
+        - name: www.alexflint.io.
+          type: CNAME
+          ttl: 60
+          rrdatas:
+            - c.storage.googleapis.com.
