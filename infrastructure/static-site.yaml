@@ -1,3 +1,9 @@
+# See the readme at the top of this dir for the overall domain
+# registration / DNS setup
+
+# Note that all DNS names have a period at the end -- apparently this
+# is part of the RFC
+
 resources:
   - name: dns-zone
     type: dns.v1.managedZone
