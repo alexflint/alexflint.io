@@ -18,7 +18,12 @@ resources:
       managedZone: alexflint-io
       records:
         - name: www.alexflint.io.
-          type: CNAME
+          type: A
           ttl: 60
           rrdatas:
-            - c.storage.googleapis.com.
+            - 34.107.158.168  # Google cloud load balancer
+        - name: alexflint.io.
+          type: A
+          ttl: 60
+          rrdatas:
+            - 34.107.158.168  # Google cloud load balancer

@@ -1,11 +1,11 @@
 +++
 title = "Alex Flint"
-tagline = "Greetings!"
+tagline = "Monasticism; AI safety"
 +++
 
-Hello! Welcome! My name is Alex. I am a human. I am just now writing a description of myself for my website so that you may understand what kind of person I am and decide how and whether they wish to relate to me. You may be in fact be in the midst of this very dilemma just now! If so, read on.
+Hello! Welcome! My name is Alex. I am just now writing a description of myself for my website so that you may understand what kind of person I am and decide how and whether you wish to relate to me. You may be in fact be in the midst of this very dilemma just now! If so, read on.
 
-To help you in deciding how and whether to relate to me, I will give you the following information. I am a thirty three year old male human. My parents loved me very much but there is a lot they did not know and although they did a good job, I came out of my first twenty years a bit wonky.
+I am a thirty three year old male human. My parents loved me very much but there is a lot they did not know and although they did a good job, I came out of my first twenty years a bit wonky.
 
 At first I didn't like being wonky, so I decided to leave my home country and study for a PhD at a prestigious university. This didn't fix my wonkiness but it was a lot of fun and I met some very good people who pointed me on the way.
 
