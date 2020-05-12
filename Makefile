@@ -6,11 +6,16 @@
 #  gsutil mb gs://www.alexflint.io
 #  gsutil web set -m index.html gs://www.alexflint.io 
 
+LOCALHOST := $(shell hostname -I | cut -d' ' -f2)
+
+localhost:
+	@echo "$(LOCALHOST)"
+
 run:
 	# the use of hostname below is for running on pixelbook
 	hugo server \
 	--bind 0.0.0.0 \
-	--baseURL http://$(shell hostname -I):1313/ \
+	--baseURL http://$(LOCALHOST):1313/ \
 	--disableFastRender
 
 build:
