@@ -1,15 +1,94 @@
-<!-- Load Stripe.js on your website. -->
-<script src="https://js.stripe.com/v3"></script>
+<!doctype html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Alex Flint - Donate</title>
+  <script src="https://js.stripe.com/v3"></script>
+</head>
+
+<body>
+
+I am an independent AI safety researcher based in Ashland, Oregon. My work concerns
+foundational theories of knowledge, optimization, and agency.
+
+<div>
+  Here are some links to my recent work:
+  <ul>
+    <li><a href="https://www.lesswrong.com/posts/znfkdCoHMANwqc2WE/the-ground-of-optimization-1">
+      The ground of optimization
+    </a></li>
+    <li><a href="https://www.lesswrong.com/posts/r3NHPD3dLFNk9QE2Y/search-versus-design-1">
+      Search versus design
+    </a></li>
+  </ul>
+</div>
+
+<div>
+  And here are some links to shorter pieces:
+  <ul>
+    <li><a href="https://www.lesswrong.com/posts/qPoaA5ZSedivA4xJa/our-take-on-chai-s-research-agenda-in-under-1500-words">
+      Our take on CHAI's research agenda
+    </a></li>
+    <li><a href="https://www.lesswrong.com/posts/uEo4Xhp7ziTKhR6jq/reflections-on-larks-2020-ai-alignment-literature-review">
+      Reflections on Larks’ 2020 AI alignment literature review
+    </a></li>
+    <li><a href="https://www.lesswrong.com/posts/A9vvxguZMytsN3ze9/reply-to-paul-christiano-on-inaccessible-information">
+      Reply to Paul Christiano on Inaccessible information
+    </a></li>
+    <li><a href="https://www.lesswrong.com/posts/Z2rkdEAJ9MvYPBeYW/thoughts-on-iason-gabriel-s-artificial-intelligence-values">
+      Thoughts on Iason Gabriel’s Artificial Intelligence, Values, and Alignment
+    </a></li>
+  </ul>
+</div>
+
+<div>
+  You may support me by making a monthly donation using one of the buttons below.
+  To make a one-off donation, please reach out to me at 
+  <a href="mailto:alex.flint@gmail.com">alex.flint@gmail.com</a>.
+</div>
 
 <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
-<button
-  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-  id="checkout-button-price_1IbpybE1AKx4otyquzLkkIrM"
-  role="link"
-  type="button"
->
-  Checkout
-</button>
+<div>
+  <button
+    style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+    id="button-donation-1"
+    role="link"
+    type="button"
+  >
+    $4 per month
+  </button>
+</div>
+<div>
+  <button
+    style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+    id="button-donation-2"
+    role="link"
+    type="button"
+  >
+    $20 per month
+  </button>
+</div>
+<div>
+  <button
+    style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+    id="button-donation-3"
+    role="link"
+    type="button"
+  >
+    $100 per month
+  </button>
+</div>
+<div>
+  <button
+    style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+    id="button-donation-4"
+    role="link"
+    type="button"
+  >
+    $500 per month
+  </button>
+</div>
 
 <div id="error-message"></div>
 
@@ -17,35 +96,39 @@
 (function() {
   var stripe = Stripe('pk_live_51Ibpm8E1AKx4otyq1q2Xe8jyMycOHXCqfYENqSE7NibBxuMu9vngsuAQvYzWQrBBB7a3yAtNFkWuuLcMUgMwrSuQ009HgPlCc5');
 
-  var checkoutButton = document.getElementById('checkout-button-price_1IbpybE1AKx4otyquzLkkIrM');
-  checkoutButton.addEventListener('click', function () {
-    /*
-     * When the customer clicks on the button, redirect
-     * them to Checkout.
-     */
+  document.getElementById('button-donation-1').addEventListener('click', function () {
+    redirectToCheckout('price_1IbpybE1AKx4otyquzLkkIrM');
+  });
+
+  document.getElementById('button-donation-2').addEventListener('click', function () {
+    redirectToCheckout('price_1IbpyrE1AKx4otyqq0T13fpt');
+  });
+
+  document.getElementById('button-donation-3').addEventListener('click', function () {
+    redirectToCheckout('price_1IbpzPE1AKx4otyqW8aSl6ea');
+  });
+
+  document.getElementById('button-donation-4').addEventListener('click', function () {
+    redirectToCheckout('price_1IbsaDE1AKx4otyqo6IHwNOc');
+  });
+
+  // Redirect the user to the checkout page. priceID is a stripe ID for a price associated with a product.
+  function redirectToCheckout(priceID) {
     stripe.redirectToCheckout({
-      lineItems: [{price: 'price_1IbpybE1AKx4otyquzLkkIrM', quantity: 1}],
+      lineItems: [{price: priceID, quantity: 1}],
       mode: 'subscription',
-      /*
-       * Do not rely on the redirect to the successUrl for fulfilling
-       * purchases, customers may not always reach the success_url after
-       * a successful payment.
-       * Instead use one of the strategies described in
-       * https://stripe.com/docs/payments/checkout/fulfill-orders
-       */
-      successUrl: window.location.protocol + '//alexflint.io/success',
-      cancelUrl: window.location.protocol + '//alexflint.io/canceled',
+      successUrl: window.location.protocol + '//www.alexflint.io/donate-success.html',
+      cancelUrl: window.location.protocol + '//www.alexflint.io/donate-canceled.html',
     })
     .then(function (result) {
       if (result.error) {
-        /*
-         * If `redirectToCheckout` fails due to a browser or network
-         * error, display the localized error message to your customer.
-         */
         var displayError = document.getElementById('error-message');
         displayError.textContent = result.error.message;
       }
     });
-  });
+  }
 })();
 </script>
+
+</body>
+</html>
