@@ -1,0 +1,40 @@
+; This website is hosted as a static website on the Digital Ocean app platform.
+; When changes are pushed to github, Digital Ocean will pull those changes, run
+; hugo to generate the static website, and deploy that website. This file 
+; controls the Digital Ocean app. It tells Digital Ocean where to pull the code
+; from and how to build the website.
+
+; Although we store it in git, Digital Ocean does not read it from the git
+; repository when it pulls the code. This is because an application can contain
+; many components from many git repositories. Instead, make changes to this file
+; and then push those changes manually with
+;
+;   $ make update-app
+;
+; or
+;
+;   $ doctl apps update dcd972c2-ff60-4fbc-bba2-6f97f778d11e --spec digitalocean.yaml
+
+domains:
+- domain: alexflint.io
+  type: PRIMARY
+  zone: alexflint.io
+- domain: www.alexflint.io
+  type: ALIAS
+  zone: alexflint.io
+name: alexflint-io
+region: nyc
+static_sites:
+- build_command: hugo -b ${BASEURL} -d public
+  environment_slug: hugo
+  envs:
+  - key: BASEURL
+    scope: BUILD_TIME
+    value: ${_self.PUBLIC_URL}
+  github:
+    branch: master
+    deploy_on_push: true
+    repo: alexflint/alexflint.io
+  name: alexflint-io
+  routes:
+  - path: /

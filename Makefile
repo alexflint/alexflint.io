@@ -22,8 +22,9 @@ build:
 	# build the static site and store it in /public
 	hugo
 
-deploy: build
-	# build and deploy static assets to GCS (see config.toml)
-	hugo deploy
-	# make sure all files in the bucket are publicly readable
-	gsutil iam ch allUsers:objectViewer gs://www.alexflint.io
+configure-app:
+	# update the Digital Ocean app with the configuration in digitalocean.yaml
+	doctl apps update dcd972c2-ff60-4fbc-bba2-6f97f778d11e --spec digitalocean.yaml
+
+deploy:
+	@echo "To deploy this website, push it to Github and it will be deployed by Digital Ocean App Platform."
