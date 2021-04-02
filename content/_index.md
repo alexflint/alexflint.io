@@ -1,6 +1,6 @@
 +++
 title = "Alex Flint"
-tagline = "Monastic; AI safety researcher"
+tagline = "AI safety researcher; roboticist; paraglider"
 +++
 
 Hello! Welcome! My name is Alex. I am just now writing a description of myself for my website so that you may understand what kind of person I am and decide how and whether you wish to relate to me. You may be in fact be in the midst of this very dilemma just now! If so, read on.
